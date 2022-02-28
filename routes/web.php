@@ -10,19 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//TOD: 1)uploads avatars
-//TOD: 3)delete user
-//24.02 1.5 hours
-//TOD: 6)make edit media
-
-//TOD: 7)implement middleware
-//25.02 1 hour
 
 
-//TODO: 2)flashing messages
 //TODO: 5)implement profile page
 
-//TODO: 4)make after register going to page edit user information
 
 use App\UsersInfo;
 use Illuminate\Support\Facades\Auth;
