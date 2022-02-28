@@ -11,26 +11,17 @@ use Illuminate\Support\Facades\DB;
 class ViewController extends Controller
 {
     function getLoginPage(){
-        if (Auth::check()){
-            return redirect()->to('/users');
-        }
         $warning = $this->request->session()->get('danger');
         return view ('page_login', ['warning' => $warning]);
     }
 
     function getRegisterPage(){
-        if (Auth::check()){
-            return redirect()->to('/users');
-        }
         return view ('page_register');
     }
 
     function getUsersPage(){
-        if(Auth::check()) {
-            $users = UsersInfo::paginate(6);
-            return view('users', ['users' => $users]);
-        }
-        return redirect()->to('/');
+        $users = UsersInfo::paginate(6);
+        return view('users', ['users' => $users]);
     }
 
     function getCreateUser(){
